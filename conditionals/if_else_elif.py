@@ -39,7 +39,7 @@ def exercise_one():
     ''' you're doing a credit card purchase
     all purchases under 50 $ does not need a pin code to be approve
     '''
-    
+
     amount = 51
     amount_free_to_pin = 50
     if amount <= amount_free_to_pin:
@@ -48,7 +48,38 @@ def exercise_one():
         print("Please enter you pin!")
 
 
+def exercise_two():
+    # Create a calculator which handles +,-,*,/ and outputs answer based on the mode/ operator used
+    # Hint: use 3 separate inputs
+    # Bonus: Extend functionality with extra mode so it also does celsius to fahrenheit conversion
+    # formula is: temp in C*9/5 + 32 = temp in f
+
+    operation_type = input("Choose your operation (+,-,*,/ or 'f' for fahrenheit)")
+    number1 = float(input("Enter the first number:"))
+
+    if operation_type.lower() == "f":
+        fahrenheit = (number1 * 9 / 5) + 32
+        print(f"Conversion from Celsius: {number1} to fahrenheit is: {fahrenheit}")
+    else:
+        number2 = float(input("Enter the second number:"))
+
+        result = 0  # initialize the variable
+        if operation_type == "+":
+            result = number1 + number2
+        elif operation_type == "-":
+            result = number1 - number2
+        elif operation_type == "*":
+            result = number1 * number2
+        elif operation_type == "/":
+            result = number1 / number2
+        else:
+            print("Ups. Something wrong happend")
+
+        print(f"The operation was: {number1} {operation_type} {number2} = {result}")
+
+
 # example_one()
 # example_two()
 # example_tree()
-exercise_one()
+# exercise_one()
+exercise_two()

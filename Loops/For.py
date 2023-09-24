@@ -63,6 +63,24 @@ def for_loop_exercise():
         print(f"{guest.title()}! you are invited to the party on {party_day}")
 
 
+def for_loop_example_three():
+    # enumerate: Simplify Loops That Need Counters
+    print('python101 - Enumerate')
+    friends = ['Brian', 'Judith', 'Reg', 'Loretta', 'Colin']
+
+    i = 0
+    for friend in friends:
+        print(i, friend)
+        i += 1
+
+    print("\n")
+
+    for num, friend in enumerate(friends, start=0):
+        print(num, friend)
+
+
+
 # for_loop_example_one()
 # for_loop_example_two()
-for_loop_exercise()
+# for_loop_exercise()
+for_loop_example_three()

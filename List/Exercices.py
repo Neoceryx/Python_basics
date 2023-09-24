@@ -62,7 +62,9 @@ def exercise_three_adding():
 
     # Combine two list in only one
     friends.extend(cars)
+    # new_friends = friends + cars
     print(friends)
+    # print(new_friends)
 
 def exercise_four_removing():
     # A list is a mutable element
@@ -81,9 +83,8 @@ def exercise_four_removing():
     new_friends = friends.copy() # or friends[:]
     print(new_friends)
 
-
-    # emty the list
-    #friends.clear()
+    # empty the list
+    # friends.clear()
 
 
 def exercise():

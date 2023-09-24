@@ -31,7 +31,13 @@ print("\n My dictionary")
 print(my_dict, "Original")
 print(sorted(my_dict.items()))  # Order by the keys
 # print(sorted(my_dict.values(), reverse())) # order the values in reverse mode
+# print(sorted(my_dict.values(), reverse=True)) # Order the values is reverse v2
 print(my_dict, "new")
+
+
+print("\n Lamba")
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_llist, key = lambda item:item[1])) # sot the list according the value by index
 
 
 

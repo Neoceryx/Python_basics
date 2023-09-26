@@ -132,6 +132,11 @@ def dictionary_exercise_two():
                 'german joke': 5}
     pet_shop = {'name': 'Pet Shop', 'blue parrot': 10, 'white rabbit': 5, 'newt': 2}
 
+    department_store = {}
+    for department in (freelancers, antiques, pet_shop): department_store.update(department)
+    print('Morning inventory of stores', sorted(department_store.items()))
+    print('-----------------')
+
     # create an dempty shopping cart
     cart = {}
     gold = 1000
@@ -143,13 +148,20 @@ def dictionary_exercise_two():
 
         if buy_item != "exit":
             if shop.get(buy_item) is not None:
-                # update the cart
-                item_cost = shop.pop(buy_item)
-                cart.update({buy_item: item_cost})  # use pop...
-                buy_items = ", ".join(list(cart.keys()))
-                total_sum = sum(cart.values())
 
+                item_cost = shop.pop(buy_item)  # use pop...
+
+                # update the cart
+                cart.update({buy_item: item_cost})
+                buy_items = ", ".join(list(cart.keys()))
+
+                total_sum = sum(cart.values())
                 print(f'You Purchased {buy_items}. your total is {total_sum} gp, you still having:{gold - total_sum} gp to spend Today it is all free. Have a nice day of mayhem!')
+
+                # evening inventory
+                department_store_after = {**freelancers, **antiques, **pet_shop}  # pyth 3.5
+                print('-----------------')
+                print('Evening inventory of stores', sorted(department_store_after.items()))
 
             else:
                 print("Upps this item is not valid")

@@ -117,7 +117,51 @@ def dictionary_exercise():
         buy_items = ", ".join(list(cart.keys()))
     print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
 
+
+def dictionary_exercise_two():
+
+    print("ver 1.2 add ability to exit a store without buying and go to next by typing 'exit',"
+          " and to exit if a nonexistant item is bought(typed)"
+          "Add purse with 1000 gold pieces and payment for the items during or at end of code and show a message "
+          "about total cost and how much gold you have left")
+
+    # create stores
+    freelancers = {'name': 'freelancing Shop', 'brian': 70, 'black knight': 20, 'biccus diccus': 100,
+                   'grim reaper': 500, 'minstrel': -15}
+    antiques = {'name': 'Antique Shop', 'french castle': 400, 'wooden grail': 3, 'scythe': 150, 'catapult': 75,
+                'german joke': 5}
+    pet_shop = {'name': 'Pet Shop', 'blue parrot': 10, 'white rabbit': 5, 'newt': 2}
+
+    # create an dempty shopping cart
+    cart = {}
+    gold = 1000
+    # loop through stores/dicts
+    for shop in (freelancers, antiques):
+
+        # inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
+        buy_item = input(f'Welcome to {shop["name"]}! (type exit to exit store) what do you want to buy: {shop}').lower()
+
+        if buy_item != "exit":
+            if shop.get(buy_item) is not None:
+                # update the cart
+                item_cost = shop.pop(buy_item)
+                cart.update({buy_item: item_cost})  # use pop...
+                buy_items = ", ".join(list(cart.keys()))
+                total_sum = sum(cart.values())
+
+                print(f'You Purchased {buy_items}. your total is {total_sum} gp, you still having:{gold - total_sum} gp to spend Today it is all free. Have a nice day of mayhem!')
+
+            else:
+                print("Upps this item is not valid")
+                break  # exit if not found a valid item in the store
+        else:  # exit if user type 'exit'
+            continue
+
+
+
+
 # dictionary_example_one()
 # dictionary_example_two()
 # dictorionay_example_three()
-dictionary_exercise()
+# dictionary_exercise()
+dictionary_exercise_two()

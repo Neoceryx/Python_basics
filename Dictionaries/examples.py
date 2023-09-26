@@ -158,7 +158,7 @@ def dictionary_exercise_two():
                 total_sum = sum(cart.values())
                 print(f'You Purchased {buy_items}. your total is {total_sum} gp, you still having:{gold - total_sum} gp to spend Today it is all free. Have a nice day of mayhem!')
 
-                # evening inventory
+                # evening inventory display invetory upddated afer pop
                 department_store_after = {**freelancers, **antiques, **pet_shop}  # pyth 3.5
                 print('-----------------')
                 print('Evening inventory of stores', sorted(department_store_after.items()))

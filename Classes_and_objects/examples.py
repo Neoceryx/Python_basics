@@ -35,7 +35,7 @@ print(film1.title, film1.imdb_score)
 # Calling a method
 film1.nice_print()
 print("\n")
-Movie.nice_print(film1)
+Movie.nice_print(film1) # this is other way to use the method
 
 print("\n")
 # Array of Objects

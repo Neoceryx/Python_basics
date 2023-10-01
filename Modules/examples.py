@@ -44,6 +44,6 @@ def zip_exercise():
     print(en, sv)
 
 
-# zip_example()
-zip_exercise()
+zip_example()
+#zip_exercise()
 

@@ -1,5 +1,5 @@
 '''
-Allow create, list, tuples, dictionaries
+Allow create, list, tuples_and_sets, dictionaries
 The comprehension, contains the same code as for loop
 '''
 

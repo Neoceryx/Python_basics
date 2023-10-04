@@ -37,9 +37,9 @@ def example_one():
 
 
 def example_two():
-    '''Comprehension can also be added to create a list of tuples '''
+    '''Comprehension can also be added to create a list of tuples_and_sets '''
     new_values = [(n, m, y) for n, m, y in zip(names, movies, year)]
-    print(new_values)  # the output will be a list of tuples
+    print(new_values)  # the output will be a list of tuples_and_sets
 
     new_values2 = [[n + "s favorite movie was " + m + " from " + str(y)] for n,m,y in zip(names, movies, year) if y < 1982 ]
     print(new_values2) # the output will be a nested list

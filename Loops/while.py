@@ -3,10 +3,9 @@ import time
 
 def wile_loop_example_one():
     i = 0
-
     while i < 5:
         i += 1  # increment the counter
-        print(f"{i}. {'*' * i} Loops are awesome*")
+        print(f"{i}. {'*' * i} Loops are awesome *")
 
 
 def while_loop_exercise():
@@ -45,6 +44,6 @@ def while_loop_exercise():
             print(f"You win. the number is: {number_to_gues}")
             break
 
-# wile_loop_example_one()
+wile_loop_example_one()
 
 while_loop_exercise()

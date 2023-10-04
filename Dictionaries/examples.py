@@ -41,7 +41,7 @@ def dictionary_example_two():
     print(movie.values()) # get a list of values
 
     # getting the items
-    print(movie.items()) # get a list of tuples of key and value
+    print(movie.items()) # get a list of tuples_and_sets of key and value
 
     print("\n Iterating over Dictionary")
     # iterating over the dictionary
